@@ -121,6 +121,9 @@
 		HTML5 canvas appears to be unsupported in the current browser.<br />
 		Please try updating or use a different browser.
 	</canvas>
+	<div style="position:fixed; width:300px;height:100px;right:40px;bottom:40px;background-color: white;">
+		<button onclick="buttonClick()">Click to send message to Godot</button>
+	</div>
 	<div id='status'>
 		<div id='status-progress' style='display: none;' oncontextmenu='event.preventDefault();'><div id ='status-progress-inner'></div></div>
 		<div id='status-indeterminate' style='display: none;' oncontextmenu='event.preventDefault();'>
@@ -137,8 +140,21 @@
 	</div>
 
 	<script type='text/javascript'>
+		function noEffect() {
+			console.log("button had no effect");
+		}
+		window.buttonClickCB = noEffect;
+		function buttonClick() {
+			window.buttonClickCB();
+		}
 		function myFunc(message) {
 			alert("My func! "+message);
+		}
+		function setupCallInterval(callback) {
+			setInterval(callback, 1000);
+		}
+		function setupButtonClickEvent(callback) {
+			window.buttonClickCB = callback;
 		}
 	</script>
 	<script type='text/javascript' src='index.js'></script>
