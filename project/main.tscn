@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="m" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 2
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="v" type="VBoxContainer" parent="m"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 1022.0
+margin_bottom = 590.0
+custom_constants/separation = 10
+
+[node name="Label" type="Label" parent="m/v"]
+margin_right = 1012.0
+margin_bottom = 31.0
+text = "Godot 3.5.3 JS Bridge project
+- droqen, pancelor"
+
+[node name="MessageEdit" type="LineEdit" parent="m/v"]
+margin_top = 41.0
+margin_right = 1012.0
+margin_bottom = 65.0
+
+[node name="MessageSend" type="Button" parent="m/v"]
+margin_top = 75.0
+margin_right = 1012.0
+margin_bottom = 95.0
+text = "Click to send message to JS"
+
+[node name="Label2" type="Label" parent="m/v"]
+margin_top = 105.0
+margin_right = 1012.0
+margin_bottom = 119.0
+text = "Message received back from JS:"
+align = 1
+
+[node name="ResponseLabel" type="Label" parent="m/v"]
+margin_top = 129.0
+margin_right = 1012.0
+margin_bottom = 143.0
+text = "(NONE)"
+align = 1
+
+[connection signal="pressed" from="m/v/MessageSend" to="." method="_on_MessageSend_pressed"]
