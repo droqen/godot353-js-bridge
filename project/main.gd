@@ -1,4 +1,8 @@
 extends Control
 
+var js : JavaScriptObject
+
 func _on_MessageSend_pressed():
-	print("Sending message '"+$m/v/MessageEdit.text+"'")
+	var message = $m/v/MessageEdit.text
+	JavaScript.eval("console.log('"+message+"');")
+	print("Sending message '"+message+"'")

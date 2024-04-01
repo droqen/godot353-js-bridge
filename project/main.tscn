@@ -32,6 +32,8 @@ text = "Godot 3.5.3 JS Bridge project
 margin_top = 41.0
 margin_right = 1012.0
 margin_bottom = 65.0
+text = "first time test message"
+secret = true
 
 [node name="MessageSend" type="Button" parent="m/v"]
 margin_top = 75.0
