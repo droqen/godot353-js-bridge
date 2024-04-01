@@ -24,36 +24,34 @@ custom_constants/separation = 10
 
 [node name="Label" type="Label" parent="m/v"]
 margin_right = 1012.0
-margin_bottom = 65.0
+margin_bottom = 31.0
 text = "Godot 3.5.3 JS Bridge project
-- droqen, pancelor
-
-test"
+- droqen, pancelor"
 
 [node name="MessageEdit" type="LineEdit" parent="m/v"]
-margin_top = 75.0
+margin_top = 41.0
 margin_right = 1012.0
-margin_bottom = 99.0
+margin_bottom = 65.0
 text = "first time test message"
 secret = true
 
 [node name="MessageSend" type="Button" parent="m/v"]
-margin_top = 109.0
+margin_top = 75.0
 margin_right = 1012.0
-margin_bottom = 129.0
+margin_bottom = 95.0
 text = "Click to send message to JS"
 
 [node name="Label2" type="Label" parent="m/v"]
-margin_top = 139.0
+margin_top = 105.0
 margin_right = 1012.0
-margin_bottom = 153.0
+margin_bottom = 119.0
 text = "Message received back from JS:"
 align = 1
 
 [node name="ResponseLabel" type="Label" parent="m/v"]
-margin_top = 163.0
+margin_top = 129.0
 margin_right = 1012.0
-margin_bottom = 177.0
+margin_bottom = 143.0
 text = "(NONE)"
 align = 1
 
