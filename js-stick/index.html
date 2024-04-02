@@ -22,8 +22,8 @@
   #wrapper {
 	position: absolute;
 	border: 1px solid black;
-	width: 100px;
-	height: 100px;
+	width: 200px;
+	height: 200px;
 	opacity: 0.0;
 	transition: opacity 0.25s linear;
   }
@@ -74,17 +74,15 @@ function createJoystick(parent) {
         x: event.changedTouches[0].clientX,
         y: event.changedTouches[0].clientY,
       };
-      return;
-    }
-    dragStart = {
-      x: event.clientX,
-      y: event.clientY,
-    };
-	parent.style.left = event.clientX - 50;
-	parent.style.top = event.clientY - 50;
+    } else {
+		dragStart = {
+		x: event.clientX,
+		y: event.clientY,
+		};
+	}
+	parent.style.left = dragStart.x - 100;
+	parent.style.top = dragStart.y - 100;
 	parent.classList = "active";
-
-
   }
 
   function handleMouseMove(event) {
